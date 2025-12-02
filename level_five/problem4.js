@@ -10,6 +10,11 @@
 // Task: Check two conditions with &&
 // Hint: && means both must be true
 function easyProblem1(clientLevel, age) {
+    if (clientLevel === "Platinum" && age === 21) {
+        return "Can access"; 
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Check if clientLevel is "Platinum" AND age is 21
     // Return "can access" if both are true, otherwise "go home"
@@ -26,6 +31,11 @@ console.log("Easy 1 - Test 3:", easyProblem1("Gold", 21)); // Should print: "go 
 // Task: Check if something is NOT equal
 // Hint: !== means "not equal to"
 function easyProblem2(clientLevel, age) {
+    if (age === 18 && clientLevel !== "Platinum") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Check if age is 21 AND clientLevel is NOT "Platinum"
     // Return "can sign in" if true, otherwise "go home"
@@ -42,6 +52,13 @@ console.log("Easy 2 - Test 3:", easyProblem2("Silver", 19)); // Should print: "g
 // Task: Use if-else if-else to check all cases
 // Hint: Check conditions one by one
 function mediumProblem(clientLevel, age) {
+    if (clientLevel === "Platinum" && age === 21) {
+        return "Can access";
+    } else if (age === 21 && clientLevel !== "Platinum") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Write if-else if-else to handle:
     // 1. clientLevel === "Platinum" && age === 21 → "can access"
@@ -62,6 +79,15 @@ console.log("Medium - Test 5:", mediumProblem("Bronze", 25)); // Should print: "
 // Task: Create nested if-else statements
 // Hint: Check age first, then check clientLevel inside
 function hardProblem(clientLevel, age) {
+    if (age === 21) {
+        if (clientLevel === "Platinum") {
+            return "Can access";
+        } else {
+            return "Can sign in";
+        }
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Use nested if statements:
     // 

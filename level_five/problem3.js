@@ -10,6 +10,11 @@
 // Task: Write a simple if statement
 // Hint: Just check one condition at a time
 function easyProblem1(inviteType, age) {
+    if (inviteType === "Designer" && age === 18) {
+        return "Can access";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If inviteType is "Designer" AND age is 18, return "can access"
     // Otherwise return "go home"
@@ -25,6 +30,11 @@ console.log("Easy 1 - Test 2:", easyProblem1("Guest", 18)); // Should print: "go
 // Task: Use if-else to handle two cases
 // Hint: if handles one case, else handles the other
 function easyProblem2(inviteType, age) {
+    if (age === 18 && inviteType !== "Designer") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If age is 18 AND inviteType is NOT "Designer", return "can sign in"
     // Otherwise return "go home"
@@ -41,6 +51,13 @@ console.log("Easy 2 - Test 3:", easyProblem2("Media", 16)); // Should print: "go
 // Task: Handle all three rules in one function
 // Hint: Use if, else if, and else
 function mediumProblem(inviteType, age) {
+    if (inviteType === "Designer" && age === 18) {
+        return "Can sign in";
+    } else if (age === 18 && inviteType !== "Designer") {
+        return "Can sign in";
+    } else { 
+        return "Go home";
+    }
     // TODO: Write your code here
     // Create a complete if-else if-else chain:
     // 1. First check: inviteType === "Designer" && age === 18 → "can access"
@@ -60,6 +77,15 @@ console.log("Medium - Test 4:", mediumProblem("Guest", 22)); // Should print: "g
 // Task: Use nested if statements with multiple levels
 // Hint: First check age, then check inviteType inside
 function hardProblem(inviteType, age) {
+    if (age === 18) {
+        if (inviteType === "Designer") {
+            return "Can access";
+        } else {
+            return "Can sign in";
+        }
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Structure your code like this:
     // if (age is 18) {
