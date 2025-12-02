@@ -10,6 +10,11 @@
 // Task: Check if passType is "Platinum" and age is 16
 // Hint: Use if statement with && operator
 function easyProblem1(passType, age) {
+    if (passType === "Platinum" && age === 16) {
+        return "Can access";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If passType is "Platinum" AND age is 16, return "can access"
     // Otherwise, return "go home"
@@ -25,6 +30,11 @@ console.log("Easy 1 - Test 2:", easyProblem1("Platinum", 15)); // Should print: 
 // Task: Check if age is 16 and passType is NOT "Platinum"
 // Hint: Use if-else with !== operator
 function easyProblem2(passType, age) {
+    if (age === 16 && passType !== "Platinum") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If age is 16 AND passType is NOT "Platinum", return "can sign in"
     // Otherwise, return "go home"
@@ -40,6 +50,13 @@ console.log("Easy 2 - Test 2:", easyProblem2("Platinum", 16)); // Should print: 
 // Task: Handle all three cases using if-else if-else
 // Hint: Check conditions in order: first "Platinum" + 16, then 16 + not "Platinum", then else
 function mediumProblem(passType, age) {
+    if (passType === "Platinum" && age === 16) {
+        return "Can access";
+    } else if (age === 16 && passType !== "Platinum") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Use if-else if-else to handle all three cases:
     // 1. passType === "Platinum" && age === 16 → "can access"
@@ -58,6 +75,15 @@ console.log("Medium - Test 3:", mediumProblem("Bronze", 20)); // Should print: "
 // Task: Create a function that checks age first, then passType
 // Hint: Use nested if statements - check age first, then passType inside
 function hardProblem(passType, age) {
+    if (age === 16) {
+        if (passType === "Platinum") {
+            return "Can access";
+        } else {
+            return "Can sign in";
+        }
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Step 1: Check if age is 16
     //   - If yes, check passType:
