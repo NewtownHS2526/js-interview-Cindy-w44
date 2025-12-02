@@ -10,6 +10,11 @@
 // Task: Use && to check both customerType and age
 // Hint: Both conditions must be true for && to work
 function easyProblem1(customerType, age) {
+    if (customerType === "Elite" && age === 21) {
+        return "Can access";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If customerType is "Elite" AND age is 21, return "can access"
     // Otherwise return "go home"
@@ -26,6 +31,11 @@ console.log("Easy 1 - Test 3:", easyProblem1("Regular", 21)); // Should print: "
 // Task: Check if customerType is different from "Elite"
 // Hint: !== checks if values are NOT equal
 function easyProblem2(customerType, age) {
+    if (age === 21 && customerType !== "Elite") {
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // If age is 21 AND customerType is NOT "Elite", return "can sign in"
     // Otherwise return "go home"
@@ -42,6 +52,15 @@ console.log("Easy 2 - Test 3:", easyProblem2("Premium", 19)); // Should print: "
 // Task: Write all three conditions using if-else if-else
 // Hint: Check each condition carefully
 function mediumProblem(customerType, age) {
+    if (age === 21 && customerType === "Elite") {
+        return "Can access";
+    } else if (age === 21 && customerType !== "Elite") { 
+        return "Can sign in";
+    } else {
+        return "Go home";
+    }
+
+
     // TODO: Write your code here
     // Write a complete if-else if-else chain:
     // 
@@ -69,6 +88,15 @@ console.log("Medium - Test 5:", mediumProblem("VIP", 25)); // Should print: "go 
 // Task: Use nested if-else statements with proper structure
 // Hint: Think about the logic flow - what should be checked first?
 function hardProblem(customerType, age) {
+    if (age === 21) {
+        if (customerType === "Elite") {
+            return "Can access";
+        } else {
+            return "Can sign in";
+        }
+    } else {
+        return "Go home";
+    }
     // TODO: Write your code here
     // Create nested if statements:
     //
